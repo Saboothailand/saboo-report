@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saboo Thailand 2025 Factory Renovation Project Report</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #2d3436;
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #fecfef 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+        }
+        
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 20% 50%, rgba(253, 121, 168, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(240, 147, 251, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 40% 80%, rgba(232, 67, 147, 0.2) 0%, transparent 50%);
+            z-index: -1;
+        }
+        
+        .presentation-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .company-header {
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(253, 121, 168, 0.15);
+            margin-bottom: 30px;
+            padding: 25px 40px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(253, 121, 168, 0.1);
+        }
+        
+        .company-info {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 30px;
+            align-items: center;
+        }
+        
+        .logo-section {
+            text-align: left;
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .company-logo {
+            font-size: 2.2em;
+            font-weight: 900;
+            background: linear-gradient(45deg, #e84393, #fd79a8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+        
+        .company-subtitle {
+            font-size: 1em;
+            color: #636e72;
+            font-weight: 500;
+        }
+        
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 15px;
+        }
+        
+        .contact-item {
+            font-size: 0.95em;
+            color: #2d3436;
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            padding: 8px 0;
+            font-weight: 400;
+        }
+        
+        .contact-icon {
+            color: #e84393;
+            font-size: 1.1em;
+            margin-top: 2px;
+        }
+        
+        .slide {
+            background: #ffffff;
+            border-radius: 25px;
+            box-shadow: 0 25px 50px rgba(232, 67, 147, 0.1);
+            margin-bottom: 40px;
+            padding: 45px;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: slideIn 0.8s ease-out forwards;
+            border: 1px solid rgba(253, 121, 168, 0.08);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .slide::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #fd79a8, #e84393, #f093fb);
+        }
+        
+        .slide:nth-child(2) { animation-delay: 0.1s; }
+        .slide:nth-child(3) { animation-delay: 0.2s; }
+        .slide:nth-child(4) { animation-delay: 0.3s; }
+        .slide:nth-child(5) { animation-delay: 0.4s; }
+        .slide:nth-child(6) { animation-delay: 0.5s; }
+        .slide:nth-child(7) { animation-delay: 0.6s; }
+        
+        @keyframes slideIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .title-slide {
+            text-align: center;
+            background: linear-gradient(135deg, #e84393 0%, #fd79a8 50%, #f093fb 100%);
+            color: white;
+            padding: 80px 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .title-slide::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+        }
+        
+        .title-slide h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 900;
+            margin-bottom: 25px;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+            position: relative;
+            z-index: 2;
+        }
+        
+        .title-slide .subtitle {
+            font-size: clamp(1rem, 3vw, 1.5rem);
+            font-weight: 300;
+            margin-bottom: 35px;
+            opacity: 0.95;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .title-slide .meta-info {
+            background: rgba(255,255,255,0.15);
+            border-radius: 15px;
+            padding: 25px;
+            margin-top: 35px;
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255,255,255,0.2);
+            position: relative;
+            z-index: 2;
+        }
+        
+        h2 {
+            color: #2d3436;
+            font-size: clamp(1.5rem, 4vw, 2.2rem);
+            font-weight: 700;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 4px solid;
+            border-image: linear-gradient(90deg, #e84393, #fd79a8) 1;
+            position: relative;
+        }
+        
+        h3 {
+            color: #636e72;
+            font-size: clamp(1.1rem, 3vw, 1.5rem);
+            font-weight: 600;
+            margin: 25px 0 20px 0;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, #e84393 0%, #fd79a8 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 25px 0;
+            box-shadow: 0 15px 35px rgba(232, 67, 147, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin: 35px 0;
+        }
+        
+        .stat-card {
+            background: linear-gradient(135deg, #f093fb 0%, #e84393 100%);
+            color: white;
+            padding: 35px 25px;
+            border-radius: 20px;
+            text-align: center;
+            transform: scale(1);
+            transition: all 0.3s ease;
+            box-shadow: 0 15px 35px rgba(240, 147, 251, 0.25);
+        }
+        
+        .stat-card:hover {
+            transform: scale(1.05) translateY(-5px);
+            box-shadow: 0 25px 50px rgba(240, 147, 251, 0.35);
+        }
+        
+        .stat-number {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 900;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .stat-label {
+            font-size: 1.1em;
+            opacity: 0.95;
+            font-weight: 400;
+        }
+        
+        .improvement-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+        
+        .improvement-card {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 15px;
+            border-left: 5px solid #e84393;
+            box-shadow: 0 10px 30px rgba(232, 67, 147, 0.08);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .improvement-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #e84393, #fd79a8);
+        }
+        
+        .improvement-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(232, 67, 147, 0.15);
+        }
+        
+        .improvement-card h4 {
+            color: #2d3436;
+            font-weight: 700;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+        }
+        
+        .improvement-card p {
+            color: #636e72;
+            line-height: 1.7;
+        }
+        
+        .chart-container {
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 20px;
+            margin: 30px 0;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(232, 67, 147, 0.08);
+            border: 1px solid rgba(232, 67, 147, 0.1);
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+        
+        .benefit-card {
+            background: linear-gradient(135deg, #fd79a8 0%, #e84393 100%);
+            color: white;
+            padding: 35px 30px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(253, 121, 168, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 25px 50px rgba(253, 121, 168, 0.4);
+        }
+        
+        .benefit-card h4 {
+            font-weight: 700;
+            margin-bottom: 20px;
+            font-size: 1.3em;
+        }
+        
+        .conclusion-box {
+            background: linear-gradient(135deg, #00b894 0%, #00a085 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 20px;
+            margin: 35px 0;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0, 184, 148, 0.3);
+        }
+        
+        .conclusion-box h3 {
+            color: white;
+            margin-bottom: 25px;
+            font-size: 1.8em;
+        }
+        
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        li {
+            margin: 12px 0;
+            padding-left: 25px;
+            position: relative;
+            line-height: 1.6;
+        }
+        
+        li:before {
+            content: "▶";
+            color: #e84393;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        
+        .benefit-card li:before {
+            color: rgba(255,255,255,0.8);
+        }
+        
+        .timeline-item {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(232, 67, 147, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .timeline-item:hover {
+            transform: translateX(10px);
+            box-shadow: 0 10px 25px rgba(232, 67, 147, 0.1);
+        }
+        
+        .timeline-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #e84393, #fd79a8);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            margin-right: 20px;
+            font-weight: bold;
+            font-size: 1.2em;
+            box-shadow: 0 5px 15px rgba(232, 67, 147, 0.3);
+        }
+        
+        .footer {
+            background: linear-gradient(135deg, #2d3436 0%, #636e72 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 20px;
+            margin-top: 40px;
+            text-align: center;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            align-items: center;
+        }
+        
+        .footer-logo {
+            font-size: 1.8em;
+            font-weight: 900;
+            margin-bottom: 15px;
+            background: linear-gradient(45deg, #fd79a8, #f093fb);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .footer-info {
+            text-align: left;
+        }
+        
+        .footer-contact {
+            text-align: right;
+        }
+        
+        .footer-item {
+            margin: 8px 0;
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+        
+        .footer-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #fd79a8, transparent);
+            margin: 25px 0;
+        }
+        
+        .footer-copyright {
+            font-size: 0.85em;
+            opacity: 0.7;
+            margin-top: 20px;
+        }
+        
+        .pdf-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, #e84393 0%, #fd79a8 100%);
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 10px 25px rgba(232, 67, 147, 0.3);
+            transition: all 0.3s ease;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .pdf-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 35px rgba(232, 67, 147, 0.4);
+        }
+        
+        .pdf-button:active {
+            transform: translateY(0);
+        }
+        
+        /* 반응형 디자인 */
+        @media (max-width: 1200px) {
+            .presentation-container {
+                max-width: 100%;
+                padding: 15px;
+            }
+            
+            .slide {
+                padding: 35px 30px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .presentation-container {
+                padding: 10px;
+            }
+            
+            .slide {
+                padding: 25px 20px;
+                margin-bottom: 25px;
+            }
+            
+            .company-header {
+                padding: 20px 25px;
+            }
+            
+            .company-info {
+                grid-template-columns: 1fr;
+                gap: 20px;
+                text-align: center;
+            }
+            
+            .logo-section {
+                justify-content: center;
+            }
+            
+            .contact-info {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+            
+            .title-slide {
+                padding: 50px 25px;
+            }
+            
+            .stats-grid, 
+            .improvement-grid, 
+            .benefits-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .timeline-item {
+                flex-direction: column;
+                text-align: center;
+                gap: 15px;
+            }
+            
+            .timeline-icon {
+                margin-right: 0;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .footer-info,
+            .footer-contact {
+                text-align: center;
+            }
+            
+            .pdf-button {
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                top: auto;
+                padding: 12px 20px;
+                font-size: 14px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .company-logo {
+                font-size: 1.8em;
+            }
+            
+            .slide {
+                padding: 20px 15px;
+            }
+            
+            .chart-container {
+                padding: 25px 15px;
+            }
+            
+            .benefit-card,
+            .stat-card {
+                padding: 25px 20px;
+            }
+        }
+        
+        /* 인쇄용 스타일 */
+        @media print {
+            .pdf-button {
+                display: none !important;
+            }
+            
+            body {
+                background: white;
+            }
+            
+            .slide {
+                box-shadow: none;
+                border: 1px solid #ddd;
+                page-break-inside: avoid;
+                margin-bottom: 20px;
+            }
+            
+            .title-slide {
+                background: linear-gradient(135deg, #e84393 0%, #fd79a8 100%);
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- PDF 다운로드 버튼 -->
+    <button class="pdf-button" onclick="generatePDF()">
+        📄 Download PDF
+    </button>
+
+    <div class="presentation-container">
+        <!-- Company Header -->
+        <div class="company-header">
+            <div class="company-info">
+                <div class="logo-section">
+                    <div class="logo-text">
+                        <div class="company-logo">SABOO THAILAND</div>
+                        <div class="company-subtitle">Saboo (Thailand) Co.,Ltd</div>
+                    </div>
+                </div>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span class="contact-icon">📍</span>
+                        <span>55/20 MOO 4, TAMBON BUNG KHAM PROY,<br>AMPHUR LAM LUK KA, PATHUM THANI 12150 THAILAND</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">📞</span>
+                        <span>TEL. 02-159-9880, 085-595-9565</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">📧</span>
+                        <span>saboothailand@gmail.com</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Title Slide -->
+        <div class="slide title-slide">
+            <h1>SABOO THAILAND<br>Factory Renovation Project</h1>
+            <div class="subtitle">Maximizing Productivity & Securing Global Standard Competitiveness</div>
+            <div class="meta-info">
+                <strong>Total Investment: 8,000,000 THB</strong><br>
+                Project Completion Report
+            </div>
+        </div>
+
+        <!-- Project Overview -->
+        <div class="slide">
+            <h2>1. Executive Summary</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">8M</div>
+                    <div class="stat-label">Total Investment (THB)</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">35%</div>
+                    <div class="stat-label">Factory Expansion</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">4</div>
+                    <div class="stat-label">Strategic Objectives Achieved</div>
+                </div>
+            </div>
+            
+            <h3>Strategic Objectives</h3>
+            <div class="timeline-item">
+                <div class="timeline-icon">1</div>
+                <div>Enhanced production capacity (CAPA) to meet increasing market demand</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-icon">2</div>
+                <div>Strengthened quality competitiveness through global cosmetics GMP certification</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-icon">3</div>
+                <div>Established foundation for new business segments (OEM & pet care products)</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-icon">4</div>
+                <div>Internalized R&D capabilities for sustainable growth momentum</div>
+            </div>
+        </div>
+
+        <!-- Background and Necessity -->
+        <div class="slide">
+            <h2>2. Project Background & Rationale</h2>
+            <div class="highlight-box">
+                <strong>Project Purpose:</strong> Overcoming existing facility limitations and establishing infrastructure for future growth
+            </div>
+            
+            <div class="improvement-grid">
+                <div class="improvement-card">
+                    <h4>🏭 Space Constraints</h4>
+                    <p>Critical shortage of production and storage space resulting in decreased operational efficiency and logistics bottlenecks</p>
+                </div>
+                <div class="improvement-card">
+                    <h4>⚙️ Process Inefficiencies</h4>
+                    <p>Unsegregated manufacturing areas increasing cross-contamination risks and reducing productivity</p>
+                </div>
+                <div class="improvement-card">
+                    <h4>🏆 Quality Certification Limitations</h4>
+                    <p>'Handmade' grade restrictions limiting external credibility and marketing capabilities</p>
+                </div>
+                <div class="improvement-card">
+                    <h4>📈 Limited Business Scalability</h4>
+                    <p>Insufficient infrastructure for new formulations (liquid) and product categories (pet care)</p>
+                </div>
+                <div class="improvement-card">
+                    <h4>🏢 Office Space Inefficiency</h4>
+                    <p>Poor office layout and underutilization leading to decreased operational efficiency</p>
+                </div>
+                <div class="improvement-card">
+                    <h4>👥 Organizational Capacity Gaps</h4>
+                    <p>Insufficient marketing and operations departments limiting business expansion capabilities</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Production Capacity Improvements -->
+        <div class="slide">
+            <h2>3. Quantitative Results: Production Infrastructure Innovation</h2>
+            
+            <div class="chart-container">
+                <h3>Production Capacity Enhancement Overview</h3>
+                <svg width="100%" height="400" viewBox="0 0 800 400">
+                    <!-- Background -->
+                    <defs>
+                        <linearGradient id="barGradient1" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" style="stop-color:#fd79a8;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#e84393;stop-opacity:1" />
+                        </linearGradient>
+                        <linearGradient id="barGradient2" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" style="stop-color:#f093fb;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#e84393;stop-opacity:1" />
+                        </linearGradient>
+                        <linearGradient id="barGradient3" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" style="stop-color:#00b894;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#00a085;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    
+                    <!-- Grid lines -->
+                    <g stroke="#e0e0e0" stroke-width="1">
+                        <line x1="100" y1="50" x2="700" y2="50"/>
+                        <line x1="100" y1="100" x2="700" y2="100"/>
+                        <line x1="100" y1="150" x2="700" y2="150"/>
+                        <line x1="100" y1="200" x2="700" y2="200"/>
+                        <line x1="100" y1="250" x2="700" y2="250"/>
+                        <line x1="100" y1="300" x2="700" y2="300"/>
+                        <line x1="100" y1="350" x2="700" y2="350"/>
+                    </g>
+                    
+                    <!-- Y-axis labels -->
+                    <text x="90" y="355" text-anchor="end" font-size="12" fill="#666">0%</text>
+                    <text x="90" y="305" text-anchor="end" font-size="12" fill="#666">10%</text>
+                    <text x="90" y="255" text-anchor="end" font-size="12" fill="#666">20%</text>
+                    <text x="90" y="205" text-anchor="end" font-size="12" fill="#666">30%</text>
+                    <text x="90" y="155" text-anchor="end" font-size="12" fill="#666">40%</text>
+                    <text x="90" y="105" text-anchor="end" font-size="12" fill="#666">50%</text>
+                    <text x="90" y="55" text-anchor="end" font-size="12" fill="#666">60%</text>
+                    
+                    <!-- Bars -->
+                    <!-- Body Products: +50% -->
+                    <rect x="150" y="100" width="120" height="250" fill="url(#barGradient1)" rx="5"/>
+                    <text x="210" y="375" text-anchor="middle" font-size="12" fill="#333">Body Care</text>
+                    <text x="210" y="390" text-anchor="middle" font-size="10" fill="#666">(Shower Gel, Shampoo)</text>
+                    <text x="210" y="85" text-anchor="middle" font-size="14" fill="#333" font-weight="bold">+50%</text>
+                    
+                    <!-- Soap Products: +10% -->
+                    <rect x="340" y="300" width="120" height="50" fill="url(#barGradient2)" rx="5"/>
+                    <text x="400" y="375" text-anchor="middle" font-size="12" fill="#333">Soap & Bath</text>
+                    <text x="400" y="285" text-anchor="middle" font-size="14" fill="#333" font-weight="bold">+10%</text>
+                    
+                    <!-- Animal Products: New -->
+                    <rect x="530" y="200" width="120" height="150" fill="url(#barGradient3)" rx="5"/>
+                    <text x="590" y="375" text-anchor="middle" font-size="12" fill="#333">Pet Care</text>
+                    <text x="590" y="390" text-anchor="middle" font-size="10" fill="#666">(New Product Line)</text>
+                    <text x="590" y="185" text-anchor="middle" font-size="14" fill="#333" font-weight="bold">10K/Month</text>
+                </svg>
+            </div>
+            
+            <div class="improvement-grid">
+                <div class="improvement-card">
+                    <h4>📦 Facility Expansion</h4>
+                    <ul>
+                        <li>35% total floor area expansion completed</li>
+                        <li>Additional production space through vertical expansion</li>
+                        <li>Significantly enhanced raw materials, packaging, and finished goods storage</li>
+                    </ul>
+                </div>
+                <div class="improvement-card">
+                    <h4>⚡ Productivity Enhancement</h4>
+                    <ul>
+                        <li>Body Care Products: 50% production increase</li>
+                        <li>Soap & Bath Products: 10% production increase</li>
+                        <li>Pet Care Products: 10,000 units/month new capacity</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Qualitative Achievements -->
+        <div class="slide">
+            <h2>4. Qualitative Results: Business Value Innovation</h2>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <h4>🏅 Global Quality Management System</h4>
+                    <ul>
+                        <li>SGS Cosmetics GMP certification achieved</li>
+                        <li>Enhanced external credibility for product quality</li>
+                        <li>Professional brand image establishment</li>
+                        <li>Foundation for domestic & international distribution expansion</li>
+                        <li>Facility tours available for buyers and external organizations</li>
+                    </ul>
+                </div>
+                
+                <div class="benefit-card">
+                    <h4>🚀 New Business Opportunities</h4>
+                    <ul>
+                        <li>Complete liquid formulation production equipment</li>
+                        <li>Entry into cosmetics OEM/ODM business</li>
+                        <li>Pet care pharmaceutical market entry</li>
+                        <li>Dedicated production facilities established</li>
+                    </ul>
+                </div>
+                
+                <div class="benefit-card">
+                    <h4>🔬 R&D & Organizational Capability Enhancement</h4>
+                    <ul>
+                        <li>Independent R&D laboratory establishment</li>
+                        <li>Systematic new product development processes</li>
+                        <li>Comprehensive office environment improvements</li>
+                        <li>Specialized personnel recruitment and organizational strengthening</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Conclusion -->
+        <div class="slide">
+            <h2>5. Conclusion & Future Vision</h2>
+            
+            <div class="conclusion-box">
+                <h3>🎯 Strategic Achievement Summary</h3>
+                <p>Saboo Thailand's qualitative and quantitative transformation achieved through 8 million THB investment</p>
+            </div>
+            
+            <div class="improvement-grid">
+                <div class="improvement-card">
+                    <h4>📊 Key Performance Indicators</h4>
+                    <ul>
+                        <li>35-50% production capacity increase</li>
+                        <li>SGS GMP international certification acquired</li>
+                        <li>2 new business segments established</li>
+                        <li>Independent R&D laboratory operations</li>
+                    </ul>
+                </div>
+                
+                <div class="improvement-card">
+                    <h4>🚀 Future Growth Strategy</h4>
+                    <ul>
+                        <li>Strengthening existing business operations</li>
+                        <li>Expanding OEM/ODM business segments</li>
+                        <li>Leading position in pet care product market</li>
+                        <li>Continuous product innovation initiatives</li>
+                    </ul>
+                </div>
+                
+                <div class="improvement-card">
+                    <h4>🎯 Long-term Vision</h4>
+                    <ul>
+                        <li>Becoming a leading company in the beauty market</li>
+                        <li>Securing global competitiveness</li>
+                        <li>Building sustainable growth foundation</li>
+                        <li>Strengthening innovative product development capabilities</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="highlight-box" style="margin-top: 30px;">
+                <strong>Conclusion:</strong> This project represents a strategic investment preparing Saboo Thailand for the next decade, 
+                establishing sustainable growth momentum through enhanced production capabilities and global-standard quality systems.
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <div class="footer-logo">SABOO THAILAND</div>
+                    <div class="footer-item">Saboo (Thailand) Co.,Ltd</div>
+                    <div class="footer-item">Excellence in Beauty & Personal Care</div>
+                </div>
+                
+                <div class="footer-contact">
+                    <div class="footer-item">📍 55/20 MOO 4, TAMBON BUNG KHAM PROY</div>
+                    <div class="footer-item">AMPHUR LAM LUK KA, PATHUM THANI 12150 THAILAND</div>
+                    <div class="footer-item">📞 TEL. 02-159-9880, 085-595-9565</div>
+                    <div class="footer-item">📧 saboothailand@gmail.com</div>
+                </div>
+            </div>
+            
+            <div class="footer-divider"></div>
+            
+            <div class="footer-copyright">
+                © 2025 Saboo (Thailand) Co.,Ltd. All rights reserved. | Factory Renovation Project Report
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function generatePDF() {
+            // 브라우저의 인쇄 대화상자 열기
+            window.print();
+        }
+
+        // 페이지 로드 시 애니메이션 시작
+        document.addEventListener('DOMContentLoaded', function() {
+            const slides = document.querySelectorAll('.slide');
+            slides.forEach((slide, index) => {
+                slide.style.animationDelay = `${index * 0.1}s`;
+            });
+        });
+    </script>
+</body>
+</html>
