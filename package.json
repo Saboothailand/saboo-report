@@ -1,0 +1,26 @@
+{
+  "name": "saboo-thailand-report",
+  "version": "1.0.0",
+  "description": "Saboo Thailand Factory Renovation Project Report 2025",
+  "main": "index.html",
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "echo 'Static site - no build needed'",
+    "start": "vercel dev"
+  },
+  "keywords": [
+    "saboo",
+    "thailand",
+    "factory",
+    "renovation",
+    "report",
+    "cosmetics",
+    "GMP"
+  ],
+  "author": "Saboo Thailand",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "vercel": "^32.0.0"
+  }
+}
