@@ -1,4 +1,11 @@
-<!DOCTYPE html>
+/* PDF 버튼 인쇄시 숨김 */
+        @media print {
+            .pdf-button {
+                display: none !important;
+            }
+        }
+        
+        /* 인쇄용 스타일 */<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -472,35 +479,6 @@
             margin-top: 20px;
         }
         
-        .pdf-button {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background: linear-gradient(135deg, #e84393 0%, #fd79a8 100%);
-            color: white;
-            border: none;
-            padding: 15px 25px;
-            border-radius: 50px;
-            font-size: 16px;
-            font-weight: 600;
-            cursor: pointer;
-            box-shadow: 0 10px 25px rgba(232, 67, 147, 0.3);
-            transition: all 0.3s ease;
-            z-index: 1000;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        
-        .pdf-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 15px 35px rgba(232, 67, 147, 0.4);
-        }
-        
-        .pdf-button:active {
-            transform: translateY(0);
-        }
-        
         /* 반응형 디자인 */
         @media (max-width: 1200px) {
             .presentation-container {
@@ -572,15 +550,6 @@
             .footer-contact {
                 text-align: center;
             }
-            
-            .pdf-button {
-                position: fixed;
-                bottom: 20px;
-                right: 20px;
-                top: auto;
-                padding: 12px 20px;
-                font-size: 14px;
-            }
         }
         
         @media (max-width: 480px) {
@@ -601,13 +570,58 @@
                 padding: 25px 20px;
             }
         }
+        .pdf-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, #e84393 0%, #fd79a8 100%);
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 10px 25px rgba(232, 67, 147, 0.3);
+            transition: all 0.3s ease;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-family: 'Inter', sans-serif;
+        }
         
-        /* 인쇄용 스타일 */
-        @media print {
+        .pdf-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 35px rgba(232, 67, 147, 0.4);
+        }
+        
+        .pdf-button:active {
+            transform: translateY(0);
+        }
+        
+        /* 인쇄 중일 때 특별 스타일 */
+        .printing {
+            background: white !important;
+        }
+        
+        .printing * {
+            -webkit-print-color-adjust: exact !important;
+            color-adjust: exact !important;
+            print-color-adjust: exact !important;
+        }
+        
+        @media (max-width: 768px) {
             .pdf-button {
-                display: none !important;
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                top: auto;
+                padding: 12px 20px;
+                font-size: 14px;
             }
-            
+        }
+        @media print {
             body {
                 background: white;
             }
@@ -937,16 +951,48 @@
 
     <script>
         function generatePDF() {
+            // PDF 생성을 위한 설정
+            const printOptions = {
+                margin: {
+                    top: '20mm',
+                    right: '15mm',
+                    bottom: '20mm',
+                    left: '15mm'
+                },
+                filename: 'Saboo_Thailand_Factory_Renovation_Report_2025.pdf',
+                html2canvas: {
+                    scale: 2,
+                    useCORS: true,
+                    letterRendering: true,
+                    logging: false
+                },
+                jsPDF: {
+                    unit: 'mm',
+                    format: 'a4',
+                    orientation: 'portrait'
+                }
+            };
+
             // 브라우저의 인쇄 대화상자 열기
             window.print();
         }
 
         // 페이지 로드 시 애니메이션 시작
         document.addEventListener('DOMContentLoaded', function() {
+            // 슬라이드 애니메이션이 순차적으로 실행되도록 설정
             const slides = document.querySelectorAll('.slide');
             slides.forEach((slide, index) => {
                 slide.style.animationDelay = `${index * 0.1}s`;
             });
+        });
+
+        // 스크롤 시 애니메이션 효과
+        window.addEventListener('scroll', function() {
+            const scrolled = window.pageYOffset;
+            const parallax = document.querySelector('body::before');
+            if (parallax) {
+                const speed = scrolled * 0.5;
+            }
         });
     </script>
 </body>
